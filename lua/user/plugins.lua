@@ -42,7 +42,6 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'qpkorr/vim-bufkill'
   use "rebelot/kanagawa.nvim"
-  use 'tjdevries/express_line.nvim'
   use 'karb94/neoscroll.nvim'
   use 'kdheepak/lazygit.nvim'
   use 'is0n/fm-nvim'
