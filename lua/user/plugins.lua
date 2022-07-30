@@ -51,10 +51,19 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'nvim-lualine/lualine.nvim'
   use 'simrat39/symbols-outline.nvim'
+  use 'kyazdani42/nvim-tree.lua'
   use {'nvim-telescope/telescope.nvim', tag = '0.1.0'}
   use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
+  }
+  use {
+    "ahmedkhalf/project.nvim",
+    config = function()
+      require("project_nvim").setup {
+	require('telescope').load_extension('projects')
+      }
+    end
   }
 
   -- Autocomplete plugins set
