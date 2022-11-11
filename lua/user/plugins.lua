@@ -35,6 +35,8 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
   -- Plugins list
+	use 'projekt0n/github-nvim-theme' 
+	use 'Mofiqul/vscode.nvim'
   use 'wbthomason/packer.nvim' -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use 'nvim-lua/plenary.nvim' -- Useful lua functions used ny lots of plugins
@@ -50,6 +52,8 @@ return packer.startup(function(use)
   use 'is0n/fm-nvim'
   use 'folke/tokyonight.nvim'
   use 'ellisonleao/gruvbox.nvim'
+	use 'glepnir/zephyr-nvim'
+  use 'nvim-treesitter/nvim-treesitter'
   use 'junegunn/seoul256.vim'
   use 'akinsho/toggleterm.nvim'
   use 'neovim/nvim-lspconfig'
@@ -58,6 +62,10 @@ return packer.startup(function(use)
   use 'sindrets/diffview.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
 	use 'ThePrimeagen/harpoon'
+  use({
+      'rose-pine/neovim',
+      as = 'rose-pine'
+	})
   use {
     "ahmedkhalf/project.nvim",
     config = function()
